@@ -1,3 +1,4 @@
+//Storing details about the books
 import React, {useState, createContext} from 'react';
 import {v1} from 'uuid';
 
@@ -16,7 +17,7 @@ const BookContextProvider = (props) =>{
     }
     const removeBook = (id) =>{
         setBooks(books.filter(book=>{
-            return bokk.id!==id
+            return book.id!==id
         }));
     }
     return(
