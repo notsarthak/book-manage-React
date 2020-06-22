@@ -7,12 +7,12 @@ import {BookContext} from '../contexts/BookContext';
 //In the JSX returned by this component we have a form with 2 input fields, one for the author another for the title of the book along with a sumit button
 //after submitting the form setting the states of both properties as empty strings to clear out the input fields
 const NewBookForm = ()=>{
-    const {addBook} = useContext(BookContext);
+    const {dispatch} = useContext(BookContext);
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
     const handleSubmit = (e)=>{
         e.preventDefault();
-        addBook(title, author);
+        dispatch({type:'ADD_BOOK', book:{title,author}});
         setTitle('');
         setAuthor('');
     }

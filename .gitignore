@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+notesafter19.txt
 
 # production
 /build
